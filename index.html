@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Modern Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name..." spellcheck="false">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div id="loading" class="status-msg hidden">Fetching weather data...</div>
+        <div id="error-msg" class="status-msg hidden">City not found. Please try again.</div>
+
+        <div id="weather-card" class="weather-card hidden">
+            <div class="date" id="current-date">Monday, 12 June</div>
+            <h2 id="city-name">London</h2>
+            <div class="temp-container">
+                <img src="" id="weather-icon" alt="Weather Icon">
+                <h1 id="temperature">24°C</h1>
+            </div>
+            <p id="description">Partly Cloudy</p>
+            
+            <div class="details">
+                <div class="col">
+                    <p class="label">Humidity</p>
+                    <p id="humidity">45%</p>
+                </div>
+                <div class="col">
+                    <p class="label">Wind Speed</p>
+                    <p id="wind-speed">12 km/h</p>
+                </div>
+                <div class="col">
+                    <p class="label">Min / Max</p>
+                    <p id="min-max">18°C / 26°C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
